@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset='UTF-8'>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>what the title</title>
+<style>
+div#stage {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+div.box {
+  position: absolute;
+  padding: 10px 5px;
+  left: 0;
+  bottom: 0;
+  min-height: 3em;
+  font-size: 21px;
+  font-family: 'あくあふぉんと', 'メイリオ', 'ＭＳ ゴシック';
+  cursor: default;
+  opacity: 0.7;
+
+  /* gradient */
+  background: -moz-linear-gradient(top center, #fff 0%, #faa 100%);
+  background: -webkit-gradient(linear, center top, center bottom, from(#fff), to(#faa));
+  background: linear-gradient(top center, #fff 0%, #faa 100%);
+}
+canvas {
+}
+code {
+  cursor: default;
+}
+</style>
+<script src='./include/vnc.js'></script>
+
+<script src='./lib/color.js'></script>
+<script src='./lib/game.js'></script>
+<script src='./lib/images.js'></script>
+<script src='./lib/plot.js'></script>
+<script src='./lib/page.js'></script>
+</head>
+<body>
+
+<div id='stage'></div>
+
+<script>
+var W = 640, H = 480;
+window.onload = function() {
+  newGame(W, H, main);
+};
+</script>
