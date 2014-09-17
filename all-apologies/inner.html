@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html><head>
+<!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"> -->
 <meta charset='UTF-8'>
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0.8,maximum-scale=1.5,user-scalable=yes">
-<title>what the title</title>
+<title>All apologies</title>
 <style>
+body {
+  width: 960px;
+}
 div#stage {
   margin: 0;
   padding: 0;
@@ -29,27 +32,20 @@ div.box {
   background: -webkit-gradient(linear, center top, center bottom, from(#fff), to(#faa));
   background: linear-gradient(top center, #fff 0%, #faa 100%);
 }
-canvas {
-}
 code {
   cursor: default;
 }
 </style>
-<script src='./include/vnc.js'></script>
-
-<script src='./lib/color.js'></script>
-<script src='./lib/game.js'></script>
-<script src='./lib/images.js'></script>
-<script src='./lib/plot.js'></script>
-<script src='./lib/page.js'></script>
+<script src='./lib/pages.js'></script>
+<script src='./lib/vnc.js'></script>
 </head>
 <body>
 
 <div id='stage'></div>
 
 <script>
-var W = 640, H = 480;
+var W = 960, H = 640;
 window.onload = function() {
-  newGame(W, H, main);
+  newGame(W, H, window.images, window.musics, window.pages);
 };
 </script>
