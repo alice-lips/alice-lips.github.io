@@ -1,38 +1,33 @@
-function newFile(type, name, option) {
-  var ret = {type: type, name: name};
-  if (type === 'f' && option.content) ret.content = option.content;
-  if (type === 'd' && option.link) ret.link = option.link;
-  return ret;
-};
-
 var files = [
-  newFile('f', 'README', {content: 'Thank you for your visit.\nWe have less contents, so please enjoy cats\' photos!!\n=> @http://is.gd/GeaywE'}),
-  newFile('d', 'lifegame', {link: './enchant-lifegame/'}),
-  newFile('d', '.all-apologies', {link: './all-apologies/'}),
+  { type: 'f', name: 'README',
+    content: 'Thank you for your visit.\nWe have less contents, so please enjoy cats\' photos!!'},
+  { type: 'd', name: 'lifegame', link: './enchant-lifegame/' },
+  { type: 'd', name: '.allapologies', link: './all-apologies/'}
 ];
 
 function cd(dir) {
+  var f, i;
   if (dir[dir.length-1] === '/') dir = dir.slice(0,dir.length-1);
-
-  var ret;
-  files.forEach(function(f) {
-    if (f.name === dir && f.type === 'd') location.href = f.link, ret = f.name;
-  });
-  if (ret) return ret;
+  for (i=0; i < files.length; ++i) {
+    f = files[i];
+    if (f.name === dir && f.type === 'd') {
+      location.href = f.link;
+      return f.name;
+    }
+  }
   throw new Error('such a dir...');
 }
 
 function less(file) {
-  var ret;
-  files.forEach(function(f) {
-    if (f.name===file && f.type==='f') ret = f.content;
-  });
-  if (ret) return ret;
+  var f, i;
+  for (i=0; i < files.length; ++i) {
+    f = files[i];
+    if (f.name===file && f.type==='f') return f.content;
+  }
   throw new Error('such a file...');
 }
 
 function alice_eval(input) {
-  input = input.trim();
   var argv = input.split(' ');
   var argc = argv.length;
 

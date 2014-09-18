@@ -1,8 +1,13 @@
-var version = "version 0.0.1";
+var version = "version 0.0.2";
 
-function onValidate(input) {
-  return (input != "");
-}
+/*
+ *     _    _ _            _ _
+ *    / \  | (_) ___ ___  | (_)_ __  ___
+ *   / _ \ | | |/ __/ _ \ | | | '_ \/ __|
+ *  / ___ \| | | (_|  __/_| | | |_) \__ \
+ * /_/   \_\_|_|\___\___(_)_|_| .__/|___/
+ *                              |_|
+ */
 
 function onHandle(line, report) {
   var result;
@@ -15,46 +20,18 @@ function onHandle(line, report) {
   }
 }
 
-/*
-var keywords = [
-  "all-apologies",
-  "lifegame",
-];
-
-function onComplete(prefix) {
-  document.title = ( keywords.filter(function (kw) { return kw.indexOf(prefix) === 0 }) );
-  return keywords.filter(function (kw) { return kw.indexOf(prefix) === 0 });
-};
-*/
-
-function makeLink() {
-  var ds = document.getElementsByTagName('div');
-  var reg = /@(http[\:\.\/a-zA-Z0-9]*)/
-  function link(url){
-    console.log(url);
-    return "<a href=" + url + ">" + url + "</a>"
-  }
-  for (var i=0;i<ds.length; ++i) {
-    var d = ds[i];
-    var rs = d.innerHTML.match(reg);
-    if (rs && rs[1]) {
-      d.innerHTML = d.innerHTML.replace(rs[0], link(rs[1]));
-    }
-  }
-  setTimeout(makeLink, 500);
-}
-
 var controller;
 $(document).ready(function() {
   controller = $("#console").console({
-    welcomeMessage:'Alice REPL, version ' + version,
-    promptLabel: '> ',
-    commandValidate: onValidate,
+    welcomeMessage: "Alice.lips " + version,
+    promptLabel: '% ',
+    commandValidate: function (input) {
+      return input !== ''
+    },
     commandHandle: onHandle,
     autofocus: true,
     animateScroll: true,
     promptHistory: true
   });
 
-  makeLink();
 });
