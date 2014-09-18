@@ -5,26 +5,34 @@ var files = [
   { type: 'd', name: '.allapologies', link: './all-apologies/'}
 ];
 
-function cd(dir) {
-  var f, i;
-  if (dir[dir.length-1] === '/') dir = dir.slice(0,dir.length-1);
-  for (i=0; i < files.length; ++i) {
-    f = files[i];
-    if (f.name === dir && f.type === 'd') {
-      location.href = f.link;
-      return f.name;
-    }
+function stat(filename) {
+  for (var i=0; i<files.length; ++i) {
+    if (files[i].name === filename) return files[i];
   }
-  throw new Error('such a dir...');
+  throw new Error('cannot stat such file or directory: ' + filename);
+}
+
+
+function cd(dir) {
+  if (dir[dir.length-1] === '/') dir = dir.slice(0,dir.length-1);
+  var d = stat(dir);
+  if (d.type === 'd' && d.link) {
+    location.href = d.link;
+    return d.name;
+  }
+  throw new Error('such a directory...');
 }
 
 function less(file) {
-  var f, i;
-  for (i=0; i < files.length; ++i) {
-    f = files[i];
-    if (f.name===file && f.type==='f') return f.content;
+  var f = stat(file);
+  if (f.type === 'f' && f.content) {
+    return f.content;
   }
   throw new Error('such a file...');
+}
+
+function date() {
+  return (new Date()).toString()
 }
 
 function alice_eval(input) {
@@ -41,10 +49,17 @@ function alice_eval(input) {
       if (argc === 2 && argv[1] === '-a') {
         return files.map(function(x){return x.type==='d'?(x.name+'/'):x.name}).join(' ')
       }
+      if (argc === 2) {
+        return stat(argv[1]).name
+      }
+      throw new Error('such a file or directory...');
     break;
 
     case 'cd':
       return cd(argv[1]);
+    break;
+
+    case 'date': return date();
     break;
 
     case 'type':

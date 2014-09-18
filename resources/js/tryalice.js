@@ -29,6 +29,7 @@ $(document).ready(function() {
       return input !== ''
     },
     commandHandle: onHandle,
+    cols: 20,
     autofocus: true,
     animateScroll: true,
     promptHistory: true
