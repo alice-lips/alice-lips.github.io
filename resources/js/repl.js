@@ -1,3 +1,5 @@
+var version = "version 0.1.1";
+
 var files = [
   { type: 'f', name: 'README',
     content: 'Thank you for your visit.\nWe have less contents, so please enjoy cats\' photos!!'},
@@ -67,10 +69,8 @@ function alice_eval(input) {
     case 'less':
     case 'more':
     case 'cat':
-    case 'vi':
-    case 'vim':
       return less(argv[1])
     break;
   }
-  throw new Error('unknown command');
+  throw new Error('command not found: ' + argv[0]);
 }
