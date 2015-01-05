@@ -2,7 +2,8 @@ var files = [
   { type: 'f', name: 'README',
     content: 'Thank you for your visit.\nWe have less contents, so please enjoy cats\' photos!!'},
   { type: 'd', name: 'lifegame', link: './enchant-lifegame/' },
-  { type: 'd', name: '.allapologies', link: './all-apologies/'}
+  { type: 'd', name: '.allapologies', link: './all-apologies/'},
+  { type: 'd', name: 'catphotos', link: 'http://bit.ly/1tJSagi'}
 ];
 
 function stat(filename) {

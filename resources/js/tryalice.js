@@ -1,4 +1,4 @@
-var version = "version 0.0.2";
+var version = "version 0.1.0";
 
 /*
  *     _    _ _            _ _
