@@ -1,4 +1,4 @@
-var version = "version 0.1.1a";
+var version = "version 0.1.2";
 
 var files = [
   { type: 'f', name: 'README',
