@@ -5,6 +5,7 @@
 body {
   margin: 0;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-color: #fff;
 }
 dl {
   margin: 5px;
@@ -23,16 +24,32 @@ a:hover {
 }
 
 div.belt {
-  background-color: #fffff3;
+  background-color: #fffff0;
   width: 100%;
   padding: 0;
   margin: 0;
   margin-top: 30%;
 }
+
+img.portrait {
+  width: 400px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+div.spacer {
+  clear: both;
+  width: auto;
+  height: 8000px;
+}
+
 </style>
 </head>
 <body>
 
+  <img class="portrait" src="./img/identicon_white.png" />
 <div class="belt">
   <dl>
     <dt>mail</dt>
@@ -45,5 +62,6 @@ div.belt {
     <dd><a href="..">Alice.lips</a></dd>
   </dl>
 </div>
+<div class="spacer"><!-- . --></div>
 </body>
 </html>
