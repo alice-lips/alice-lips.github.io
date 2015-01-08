@@ -1,4 +1,4 @@
-var version = "version 0.1.2";
+var version = "version 0.1.3";
 
 var files = [
   { type: 'f', name: 'README', content: text.README },
@@ -12,7 +12,7 @@ function stat(filename) {
   for (var i=0; i<files.length; ++i) {
     if (files[i].name === filename) return files[i];
   }
-  throw new Error('cannot stat such file or directory: ' + filename);
+  throw new Error(filename + ': No such file or directory');
 }
 
 
@@ -23,7 +23,7 @@ function cd(dir) {
     location.href = d.link;
     return d.name;
   }
-  throw new Error('such a directory...');
+  throw new Error('not a directory: ' + dir);
 }
 
 function less(file) {
@@ -31,7 +31,7 @@ function less(file) {
   if (f.type === 'f' && f.content) {
     return f.content;
   }
-  throw new Error('such a file...');
+  throw new Error('not a file: ' + file);
 }
 
 function date() {
