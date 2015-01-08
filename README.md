@@ -1,7 +1,4 @@
-alice-lips.github.io
+Alice.lips
 ====================
 
-deployed at
-
-- [alice-lips.github.io](http://alice-lips.github.io/)
-- [alice.fail](http://alice.fail/)
+[alice-lips.github.io](http://alice-lips.github.io/) -> [alice.fail](http://alice.fail/)
