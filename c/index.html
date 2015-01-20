@@ -62,5 +62,11 @@
         <dd><a href="https://twitter.com/cympfh">@cympfh</a></dd>
       </dl>
     </div>
+    <div style='color:white;padding-top:100%' id='whity'></div>
+    <script>
+      function double(f) { return function() { f(); f(); } }
+      function print() { whity.innerHTML += '世界が平和でありますように'; }
+      setTimeout(double(double(double(double(double(double(double(print))))))), 200);
+    </script>
   </body>
 </html>
