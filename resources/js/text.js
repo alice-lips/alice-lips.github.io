@@ -1,7 +1,7 @@
 var text = {
   README: 'Thank you for your visit.\nWe have less contents, so please enjoy cats\' photos!!',
   log:"\
-accepted at C88 (2015/8/16)\
-v0.1.2 (Thu Jan  8 08:45:48 JST 2015): alice-lips.github.io -> alice.fail (permanent link)\
+  2015/8/16 accepted at C88\n\
+  2015/1/8 v0.1.2: alice-lips.github.io -> alice.fail (permanent link)\
   "
 };

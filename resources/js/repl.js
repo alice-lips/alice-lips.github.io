@@ -4,7 +4,7 @@ var files = [
   { type: 'f', name: 'README', content: text.README },
   { type: 'd', name: '.allapologies', link: './all-apologies/'},
   { type: 'd', name: 'catphotos', link: 'http://bit.ly/1tJSagi'},
-  { type: 'f', name: '.log', content: text.log }
+  { type: 'f', name: 'log', content: text.log }
 ];
 
 function stat(filename) {
