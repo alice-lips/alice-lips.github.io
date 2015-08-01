@@ -5,6 +5,7 @@
     <title>Alice.lisp web site</title>
     <script type="text/javascript" src="./resources/js/text.js"></script>
     <link rel='stylesheet' href='./resources/css/i.css'>
+    <link rel='stylesheet' href='./resources/css/font-awesome.min.css'>
     <script type="text/javascript" src="./resources/js/jquery.min.js"></script>
     <script type="text/javascript" src="./resources/js/jquery.console.js"></script>
     <script type="text/javascript" src="./resources/js/repl.js"></script>
@@ -12,58 +13,40 @@
   </head>
   <body>
 
-  <!-- I am HARUHI -->
-  <center id="SOS" style='transition-duration: 0.5s; font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック"'>
-    <div style="font-size: 14px; margin: 10px;">
-      あなたは
-      <span id="hito" style="color: white; background-color: black; font-weight: bold;"></span>
-      人目の訪問者です。
+    <header>
+    <i style='font-size: 200px' class="fa fa-object-ungroup"></i>
+    <span>Alice.lips</span>
+    <hr />
+    <a id="members" href="members/"><i class="fa fa-users"></i></a>
+    <a id="ls" href="ls/"><i class="fa fa-folder-o"></i></a>
+    <a href="https://github.com/alice-lips"><i class="fa fa-github"></i></a>
+    <a id="mail" href="mail/"><i class="fa fa-envelope-o"></i></a>
+    <a id="run" href="#terminal"><i class="fa fa-terminal"></i></a>
+    </header>
+
+    <div class='wrapper' id="terminal">
+      <div class='content'><div class="console" id="console"></div></div>
     </div>
-    <div style="color: red; font-size: 40px;">Alice.lisp のサイトにようこそ！</div>
-    <div id="LOGO" style="font-size: 200px">〄</div>
-    <div style="margin: 20px; font-size: 20px;">入り口</div>
-    <div style="margin: 20px; font-size: 14px;">メールはこちらから→<span style="color: red">📮</span></div>
-    <div style="margin: 20px; font-size: 14px;">活動予定</div>
-    <hr>
+
     <script>
-var a = "00298";
-a += Math.random()*5|0+5;
-a += Math.random()*10|0;
-hito.innerHTML = a;
-setInterval(function() {
-  LOGO.style.color = Math.random() < .33 ? '#00d040' : Math.random() < .5 ? 'pink' : 'aqua';
-  }, 1000);
-    </script>
-  </center>
+      var Terminal = {};
+      Terminal.showing = false;
+      Terminal.show = function(e) {
+        terminal.style.opacity = '1.0';
+      };
+      Terminal.hidden = function(e) {
+        terminal.style.opacity = '0.0';
+      };
+      Terminal.toggle = function() {
+        if (Terminal.showing) {
+          Terminal.hidden();
+        } else {
+          Terminal.show();
+        }
+          Terminal.showing = true ^ Terminal.showing;
+        };
+        run.onclick = Terminal.toggle;
+      </script>
 
-  <div class='wrapper' id="terminal" style="opacity: 0.0; transition-duration: 0.5s; position: relative; left: 0; top: -100px; width: 100%">
-    <div class='content'>
-      <div class="console" id="console"></div>
-    </div>
-  </div>
-
-  <script>
-var Terminal = {};
-Terminal.showing = false;
-Terminal.show = function(e) {
-  SOS.style.opacity = '0.2';
-  terminal.style.opacity = '1.0';
-};
-Terminal.hidden = function(e) {
-  SOS.style.opacity = '1.0';
-  terminal.style.opacity = '0.0';
-};
-Terminal.toggle = function() {
-  if (Terminal.showing) {
-    Terminal.hidden();
-  } else {
-    Terminal.show();
-  }
-  Terminal.showing = true ^ Terminal.showing;
-};
-SOS.onclick = Terminal.toggle;
-SOS.oncontextmenu = Terminal.toggle;
-  </script>
-
-  </body>
-</html>
+    </body>
+  </html>

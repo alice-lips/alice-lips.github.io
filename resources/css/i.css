@@ -1,9 +1,18 @@
+/* for index.html */
+
+@font-face {
+  font-family: aqua;
+  src: local("aquafont"), url("http://cympfh.github.io/fonts/aquafont.ttf");
+}
+
 body {
+  font-family: aquafont, aqua, YukarryAA;
   font-size: 18px;
   background-color: #fff;
   color: #403a3a;
   margin: 0;
 }
+
 h1 {
   font-size: 24px;
   text-decoration: underline;
@@ -14,7 +23,7 @@ div.content {
   width: 100%;
   background-color: #f3f0f0;
   padding: 0;
-  margin: 100px 0;
+  margin: 10px 0;
 }
 
 div.console {
@@ -25,14 +34,21 @@ div.console {
   padding: 0 80px;
   width: 80%;
   height: 280px;
-
-  overflow: auto;
 }
 
+/*
 a {
   font-size: 14px;
   text-decoration: none;
   color: #f9f9ff;
+}
+*/
+
+#terminal {
+  opacity: 0.0;
+  transition: 0.5s;
+  transition-duration: 0.5s;
+  width: 100%;
 }
 
 #console div.success {
@@ -45,4 +61,30 @@ a {
 
 .jquery-console-cursor {
   background-color: #d0d0d0;
+}
+
+header {
+  text-align: center;
+  margin: 100px 0 20px 0;
+  font-size: 80px;
+}
+
+header > hr {
+   padding: 0;
+   text-align: center;
+   width: 50%;
+   border: 0;
+   height: 1px;
+   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.fa {
+  color: #504040;
+  padding: 6px;
+  transition: 0.5s;
+  transition-duration: 0.5s;
+}
+
+a > .fa:hover {
+  transform: rotate(-45deg);
 }
