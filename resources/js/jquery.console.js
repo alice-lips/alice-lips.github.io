@@ -239,6 +239,14 @@ var Hack = {};
       return false;
     });
 
+    container.mouseover(function(){
+      inner.addClass('jquery-console-focus');
+      inner.removeClass('jquery-console-nofocus');
+      typer.focus();
+      scrollToBottom();
+      return false;
+    });
+
     ////////////////////////////////////////////////////////////////////////
     // Handle losing focus
     typer.blur(function(){
