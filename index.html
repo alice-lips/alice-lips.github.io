@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <title>Alice.lisp web site</title>
+    <script>
+      var Terminal = {};
+    </script>
     <script type="text/javascript" src="./resources/js/text.js"></script>
     <link rel='stylesheet' href='./resources/css/i.css'>
+    <link rel='stylesheet' href='./resources/css/terminal.css'>
     <link rel='stylesheet' href='./resources/css/font-awesome.min.css'>
     <script type="text/javascript" src="./resources/js/jquery.min.js"></script>
     <script type="text/javascript" src="./resources/js/jquery.console.js"></script>
-    <script type="text/javascript" src="./resources/js/repl.js"></script>
+    <script type="text/javascript" src="./resources/fs.js"></script>
     <script type="text/javascript" src="./resources/js/tryalice.js"></script>
   </head>
   <body>
@@ -17,10 +21,10 @@
     <i style='font-size: 200px' class="fa fa-object-ungroup"></i>
     <span>Alice.lips</span>
     <hr />
-    <a id="members" href="members/"><i class="fa fa-users"></i></a>
-    <a id="ls" href="ls/"><i class="fa fa-folder-o"></i></a>
+    <a id="home" href="home/"><i class="fa fa-users"></i></a>
+    <a id="etc" href="etc/"><i class="fa fa-folder-o"></i></a>
     <a href="https://github.com/alice-lips"><i class="fa fa-github"></i></a>
-    <a id="mail" href="mail/"><i class="fa fa-envelope-o"></i></a>
+    <a id="mail" href="etc/mail.html"><i class="fa fa-envelope-o"></i></a>
     <a id="run" href="#terminal"><i class="fa fa-terminal"></i></a>
     </header>
 
@@ -29,7 +33,6 @@
     </div>
 
     <script>
-      var Terminal = {};
       Terminal.showing = false;
       Terminal.show = function(e) {
         terminal.style.opacity = '1.0';
@@ -46,6 +49,23 @@
           Terminal.showing = true ^ Terminal.showing;
         };
         run.onclick = Terminal.toggle;
+
+function autorun(line) {
+  if (! Terminal.showing) { Terminal.toggle(); }
+  Hack.insert(line);
+  Hack.enter();
+}
+
+function entry(id, line) {
+  var root = document.getElementById(id);
+  root.href = '#' + id;
+  root.onclick = function() { autorun(line); };
+}
+
+entry('home', 'ls /home');
+entry('etc', 'ls /etc');
+entry('mail', 'cat /etc/mail.html');
+
       </script>
 
     </body>

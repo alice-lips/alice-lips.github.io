@@ -7,33 +7,10 @@
 
 body {
   font-family: aquafont, aqua, YukarryAA;
-  font-size: 18px;
+  font-size: 14px;
   background-color: #fff;
   color: #403a3a;
   margin: 0;
-}
-
-h1 {
-  font-size: 24px;
-  text-decoration: underline;
-  margin: 10px;
-}
-
-div.content {
-  width: 100%;
-  background-color: #f3f0f0;
-  padding: 0;
-  margin: 10px 0;
-}
-
-div.console {
-  font-size: 14px;
-  font-family: monospace;
-
-  margin: 0;
-  padding: 0 80px;
-  width: 80%;
-  height: 280px;
 }
 
 /*
@@ -44,29 +21,14 @@ a {
 }
 */
 
-#terminal {
-  opacity: 0.0;
-  transition: 0.5s;
-  transition-duration: 0.5s;
-  width: 100%;
-}
-
-#console div.success {
-  color: #0a0a0f;
-}
-
-#console div.fail {
-  color: #fa8080;
-}
-
-.jquery-console-cursor {
-  background-color: #d0d0d0;
-}
-
 header {
   text-align: center;
-  margin: 100px 0 20px 0;
+  margin: 60px 0 20px 0;
   font-size: 80px;
+}
+
+header > span {
+  color: #604a4a;
 }
 
 header > hr {
@@ -81,8 +43,8 @@ header > hr {
 .fa {
   color: #504040;
   padding: 6px;
-  transition: 0.5s;
-  transition-duration: 0.5s;
+  transition: 0.3s;
+  transition-duration: 0.3s;
 }
 
 a > .fa:hover {
