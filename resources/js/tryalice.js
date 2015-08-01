@@ -150,7 +150,7 @@ utils.less = function (file) {
   cat.src = '.' + path_norm(pwd, file);
   cat.style.border = '0';
   cat.style.width = '100%';
-  cat.style.height = '60px';
+  cat.style.height = '200px';
   cat.style.padding = '0';
   cat.style.margin = '0';
   $('.jquery-console-inner').append(cat);

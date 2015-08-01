@@ -132,14 +132,14 @@ var Hack = {};
 
     ////////////////////////////////////////////////////////////////////////
     // Main entry point
-    (function(){
+    (function () {
       container.append(inner);
       inner.append(typer);
       typer.css({
         position: 'fixed',
         opacity: '0',
         top: '0',
-        left: '0'
+        left: '-99999px'
       });
       if (config.welcomeMessage) {
         message(config.welcomeMessage, 'jquery-console-welcome');

@@ -21,10 +21,8 @@ div.content {
 }
 
 div.console {
-  font-size: 12px;
+  font-size: 13px;
   font-family: monospace;
-  font-weight: bold;
-
   margin: 0;
   padding: 0 80px;
   width: 80%;
