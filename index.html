@@ -56,15 +56,20 @@ function autorun(line) {
   Hack.enter();
 }
 
-function entry(id, line) {
+function entry(id, commands) {
   var root = document.getElementById(id);
   root.href = '#' + id;
-  root.onclick = function() { autorun(line); };
+  root.onclick = function() {
+    var i;
+    for (i = 0; i < commands.length; ++i) {
+      autorun(commands[i]);
+    }
+  };
 }
 
-entry('home', 'ls /home');
-entry('etc', 'ls /etc');
-entry('mail', 'cat /etc/mail.html');
+entry('home', ['cd /home', 'ls']);
+entry('etc', ['cd /etc', 'ls']);
+entry('mail', ['cat /etc/mail.html']);
 
       </script>
 
