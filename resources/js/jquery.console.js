@@ -171,7 +171,7 @@ var Hack = {};
           }
         });
         newPromptBox();
-        inner.parent().fadeIn(function(){
+        inner.parent().fadeIn(function () {
           inner.addClass('jquery-console-focus');
           typer.focus();
         });
@@ -180,18 +180,18 @@ var Hack = {};
 
     ////////////////////////////////////////////////////////////////////////
     // Reset terminal
-    extern.notice = function(msg,style){
+    extern.notice = function (msg, style) {
       var n = $('<div class="notice"></div>').append($('<div></div>').text(msg))
-      .css({visibility:'hidden'});
+          .css({visibility: 'hidden'});
       container.append(n);
       var focused = true;
-      if (style=='fadeout')
-        setTimeout(function(){
-          n.fadeOut(function(){
+      if (style == 'fadeout') {
+        setTimeout(function () {
+          n.fadeOut(function () {
             n.remove();
           });
-        },4000);
-        else if (style=='prompt') {
+        }, 4000);
+      } else if (style == 'prompt') {
           var a = $('<br/><div class="action"><a href="javascript:">OK</a><div class="clear"></div></div>');
           n.append(a);
           focused = false;
@@ -465,7 +465,7 @@ var Hack = {};
           else continuedText = promptText;
         } else continuedText = undefined;
         if (continuedText) text = continuedText;
-        var ret = config.commandHandle(text,function(msgs){
+        var ret = config.commandHandle(text, function(msgs){
           commandResult(msgs);
         });
         if (extern.continuedPrompt && !continuedText)
@@ -501,15 +501,15 @@ var Hack = {};
 
     ////////////////////////////////////////////////////////////////////////
     // Reset the prompt in invalid command
-    function commandResult(msg,className) {
+    function commandResult(msg, className) {
       column = -1;
       updatePromptDisplay();
       if (typeof msg == 'string') {
-        message(msg,className);
+        message(msg, className);
       } else if ($.isArray(msg)) {
         for (var x in msg) {
           var ret = msg[x];
-          message(ret.msg,ret.className);
+          message(ret.msg, ret.className);
         }
       } else { // Assume it's a DOM node or jQuery object.
         inner.append(msg);
@@ -519,9 +519,11 @@ var Hack = {};
 
     ////////////////////////////////////////////////////////////////////////
     // Display a message
-    function message(msg,className) {
+    function message(msg, className) {
       var mesg = $('<div class="jquery-console-message"></div>');
-      if (className) mesg.addClass(className);
+      if (className) {
+        mesg.addClass(className);
+      }
       mesg.filledText(msg).hide();
       inner.append(mesg);
       mesg.show();
@@ -658,6 +660,7 @@ var Hack = {};
     // TODO: Use jQuery's .html() trick, or grab a proper, fast
     // HTML encoder.
     function htmlEncode(text){
+      return text;
       return (
         text.replace(/&/g,'&amp;')
         .replace(/</g,'&lt;')
@@ -675,4 +678,4 @@ var Hack = {};
     $(this).html($(this).html().replace(/\n/g,'<br/>'));
     return this;
   };
-})(jQuery);
+}(jQuery));

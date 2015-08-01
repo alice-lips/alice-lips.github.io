@@ -9,8 +9,8 @@
   color: #0a0a0f;
 }
 
-#console> div.fail {
-  color: #fa8080;
+div.fail {
+  color: #ff5050;
 }
 
 div.content {
@@ -43,3 +43,11 @@ div.console {
   opacity: 0.34;
 }
 
+a.cdir {
+  text-decoration: underline;
+  cursor: pointer;
+}
+a.cdir:hover {
+  text-decoration: underline;
+  color: red;
+}
