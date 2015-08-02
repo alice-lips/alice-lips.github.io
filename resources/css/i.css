@@ -50,3 +50,15 @@ header > hr {
 a > .fa:hover {
   transform: rotate(-45deg);
 }
+
+.fa-exclamation {
+  color: white;
+  text-shadow:0 0 5px #000;
+}
+
+a > .fa-exclamation:hover {
+  transform: rotate(0);
+  transform: scale(1.2, 1.2);
+}
+
+

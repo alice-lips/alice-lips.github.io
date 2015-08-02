@@ -47,6 +47,7 @@ a.cdir {
   text-decoration: underline;
   cursor: pointer;
 }
+
 a.cdir:hover {
   text-decoration: underline;
   color: red;
