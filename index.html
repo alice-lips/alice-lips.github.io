@@ -22,7 +22,8 @@
     <span>Alice.lips</span>
     <hr />
     <a id="home" href="home/"><i class="fa fa-users"></i></a>
-    <a id="etc" href="etc/"><i class="fa fa-folder-o"></i></a>
+    <a id="log" href="log.html"><i class="fa fa-file-text-o"></i></a>
+    <!-- <a id="etc" href="etc/"><i class="fa fa-folder-o"></i></a> -->
     <a href="https://github.com/alice-lips"><i class="fa fa-github"></i></a>
     <a id="mail" href="etc/mail.html"><i class="fa fa-envelope-o"></i></a>
     <a id="run" href="#terminal"><i class="fa fa-terminal"></i></a>
@@ -68,7 +69,8 @@ function entry(id, commands) {
 }
 
 entry('home', ['cd /home', 'ls']);
-entry('etc', ['cd /etc', 'ls']);
+entry('log', ['cat /log.html']);
+// entry('etc', ['cd /etc', 'ls']);
 entry('mail', ['cat /etc/mail.html']);
 
       </script>

@@ -1,4 +1,4 @@
-var version = "version 0.2.0";
+var version = "v0.2.1";
 /*
  *     _    _ _            _ _
  *    / \  | (_) ___ ___  | (_)_ __  ___
@@ -150,10 +150,25 @@ utils.less = function (file) {
   cat.src = '.' + path_norm(pwd, file);
   cat.style.border = '0';
   cat.style.width = '100%';
-  cat.style.height = '200px';
+  cat.style.height = '100px';
   cat.style.padding = '0';
   cat.style.margin = '0';
   $('.jquery-console-inner').append(cat);
+
+  setTimeout(function(i) {
+    if (i < 0) return;
+    try {
+      var hash = cat.contentWindow.location.hash;
+      if (hash !== '' && parseInt(hash.slice(1)) > 0) {
+        var h = parseInt(hash.slice(1)) + 30;
+        cat.style.height = Math.min(200, Math.max(50, h)) + 'px';
+        return;
+      }
+      setTimeout(arguments.callee, 100, (i-1));
+    } catch (e) {
+      // good bye
+    }
+  }, 100, 20);
 };
 
 utils.type = utils.less;

@@ -1,8 +1,9 @@
 var files = [
-"home/cympfh/index.html",
-"home/himono/index.html",
-"index.html",
+"README.html",
 "log.html",
-"etc/c88/index.html",
+"home/himono/index.html",
+"home/cympfh/index.html",
+"index.html",
 "etc/mail.html",
+"etc/c88/index.html",
 ];
