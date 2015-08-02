@@ -160,7 +160,7 @@ utils.less = function (file) {
     try {
       var hash = cat.contentWindow.location.hash;
       if (hash !== '' && parseInt(hash.slice(1)) > 0) {
-        var h = parseInt(hash.slice(1)) + 30;
+        var h = parseInt(hash.slice(1)) + 15;
         cat.style.height = Math.min(200, Math.max(50, h)) + 'px';
         return;
       }
