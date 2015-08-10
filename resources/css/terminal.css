@@ -26,7 +26,7 @@ div.console {
   margin: 0;
   padding: 0 80px;
   width: 80%;
-  height: 350px;
+  height: 420px;
 }
 
 .jquery-console-cursor {
@@ -34,7 +34,7 @@ div.console {
 }
 
 .jquery-console-inner {
-  height: 350px;
+  height: 420px;
   overflow: hidden;
   word-wrap: break-word;
 }
