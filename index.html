@@ -1,83 +1,194 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="ja">
+
   <head>
-    <meta charset="UTF-8">
-    <title>Alice.lisp web site</title>
-    <script>
-      var Terminal = {};
-    </script>
-    <script type="text/javascript" src="./resources/js/text.js"></script>
-    <link rel='stylesheet' href='./resources/css/i.css'>
-    <link rel='stylesheet' href='./resources/css/terminal.css'>
+    <meta charset="utf-8">
+    <title>Alice.lips</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
     <link rel='stylesheet' href='./resources/css/font-awesome.min.css'>
-    <script type="text/javascript" src="./resources/js/jquery.min.js"></script>
-    <script type="text/javascript" src="./resources/js/jquery.console.js"></script>
-    <script type="text/javascript" src="./resources/fs.js"></script>
-    <script type="text/javascript" src="./resources/js/tryalice.js"></script>
+    <link rel='stylesheet' href='./resources/css/i.css'>
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
   </head>
+
   <body>
 
-    <header>
-    <i style='font-size: 200px' class="fa fa-object-ungroup"></i>
-    <span>Alice.lips</span>
-    <hr />
-    <a id="home" href="home/"><i class="fa fa-users"></i></a>
-    <a id="exclamation" href="#exclamation"><i class="fa fa-exclamation"></i></a>
-    <a id="log" href="log.html"><i class="fa fa-file-text-o"></i></a>
-    <!-- <a href="https://github.com/alice-lips"><i class="fa fa-github"></i></a> -->
-    <a id="mail" href="etc/mail.html"><i class="fa fa-envelope-o"></i></a>
-    <a id="run" href="#terminal"><i class="fa fa-terminal"></i></a>
-    </header>
+    <div class="reveal">
 
-    <div class='wrapper' id="terminal">
-      <div class='content'><div class="console" id="console"></div></div>
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <section>
+          <i style="font-size: 150px" class="fa fa-object-ungroup"></i>
+            <img
+            width="300px"
+            src="resources/img/alicelips.colored.svg"
+            alt="Alice.lips">
+            <hr />
+            <div class="icons">
+              <a href="#/3"><i class="fa fa-users"></i></a>
+              <a href="#/1"><i class="fa fa-exclamation"></i></a>
+              <a href="#/2"><i class="fa fa-folder-open-o"></i></a>
+              <a href="#/4"><i class="fa fa-file-text-o"></i></a>
+            </div>
+            <p> <small>Created by himono and cympfh</small> </p>
+          </section>
+          <section>
+            <h2>Transition Styles</h2>
+            <p>
+              You can select from different transitions, like: <br>
+              <a href="?transition=none#/transitions">None</a> -
+              <a href="?transition=fade#/transitions">Fade</a> -
+              <a href="?transition=slide#/transitions">Slide</a> -
+              <a href="?transition=convex#/transitions">Convex</a> -
+              <a href="?transition=concave#/transitions">Concave</a> -
+              <a href="?transition=zoom#/transitions">Zoom</a>
+            </p>
+          </section>
+        </section>
+
+        <section data-background-color="#f0d0d0">
+          <h2>news</h2>
+
+          <p>
+          冬コミだします (落ちてなければ):
+          ゆゆ式アンソロ
+          </p>
+
+          <p>
+          <a href="#/2/1">夏コミ出したやつ</a> 公開します
+          </p>
+
+        </section>
+
+        <section>
+          <section>
+            <h2>publication</h2>
+            <ul style="list-style-type: circle">
+              <li><a href="#/2/1">c88</a></li>
+            </ul>
+          </section>
+          <section>
+            <h2>夏コミ c88</h2>
+
+            <ul style="font-size:13px">
+              <li>2015/08/14-16</li>
+              <ul>
+                <li><a href="https://webcatalog-free.circle.ms/Circle/11941306">Comike Web Catalog (要ログイン)</a></li>
+                <li>日曜日 東キ03b</li>
+                <li>創作・アニメ・ゲーム(男性向) (200) </li>
+              </ul>
+            </ul>
+
+            <table class="twocolumns">
+              <tr>
+                <td style="width:300px">
+                  <img width="290px" src="./pub/c88/img/preface-all-apologies.png"><br />
+                  <small>All Apologies<br />(小説; ひもの @minamo__i)</small>
+                  <a href="./pub/c88/AllAplogies.pdf"></a>
+                </td>
+                <td style="width:300px">
+                  <img width="290px" src="./pub/c88/img/preface-take3.png"><br />
+                  <small>Take 3 (小説; 枚方 @cympfh)</small>
+                </td>
+              </tr>
+            </table>
+
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>about us</h2>
+            cympfh と himono
+          </section>
+
+          <section>
+            <h2>cympfh</h2>
+    <p style="float:left; line-height:30px; margin:40px">
+      <i class="fa fa-twitter-square"></i>
+      <code>@<a href="https://twitter.com/cympfh" target="_blank">cympfh</a></code>
+      <i class="fa fa-github-square"></i>
+      <code><a href="https://github.com/cympfh" target="_blank">cympfh</a></code>
+      <br />
+      <i class="fa fa-envelope"></i>
+      <code>%w(cympfh gmail com)<span style='color:#ddd'>.join('.').sub('.', '@')</span></code>
+    </ul>
+    <p style="float: right">
+    <img height="120px" src="resources/img/cympfh-id.png">
+    </p>
+          </section>
+
+          <section>
+            <h2>himono</h2>
+            中卒
+          </section>
+
+        </section>
+
+        <section>
+        <h2>log</h2>
+<pre>
+2015/8/16  accepted at C88 @三日目(Sun.)東キ03b
+           We will publish 2 novel books (one by himono and one by cympfh).
+           Please see /pub/c88 for detail
+2015/8/2   v0.2.1
+2015/1/8   v0.1.2: alice-lips.github.io -> alice.fail (permanent link)
+</pre>
+        </section>
+
+      </div>
+
     </div>
 
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
     <script>
-      Terminal.showing = false;
-      Terminal.show = function(e) {
-        terminal.style.opacity = '1.0';
-      };
-      Terminal.hidden = function(e) {
-        terminal.style.opacity = '0.0';
-      };
-      Terminal.toggle = function() {
-        if (Terminal.showing) {
-          Terminal.hidden();
-        } else {
-          Terminal.show();
-        }
-          Terminal.showing = true ^ Terminal.showing;
-        };
-        run.onclick = Terminal.toggle;
 
-function autorun(line) {
-  if (! Terminal.showing) { Terminal.toggle(); }
-  Hack.insert(line);
-  Hack.enter();
-}
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
 
-function entry(id, commands) {
-  var root = document.getElementById(id);
-  root.href = '#' + id;
-  root.onclick = function() {
-    var i;
-    for (i = 0; i < commands.length; ++i) {
-      autorun(commands[i]);
-    }
-  };
-}
+        transition: 'convex', // none/fade/slide/convex/concave/zoom
 
-entry('home', ['cd /home', 'ls']);
-entry('log', ['cat /log.html']);
-entry('mail', ['cat /etc/mail.html']);
-entry('exclamation', [
-    'cd /etc',
-    'ls',
-    'cat c88/'
-    ]);
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
 
-      </script>
+    </script>
 
-    </body>
-  </html>
+  </body>
+</html>

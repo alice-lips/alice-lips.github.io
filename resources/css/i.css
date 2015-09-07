@@ -8,40 +8,50 @@
 body {
   font-family: aquafont, aqua, YukarryAA;
   font-size: 14px;
-  background-color: #fff;
-  color: #403a3a;
+  background-color: #f0f0f0;
+  color: #000;
   margin: 0;
+  text-align: center;
 }
-
-/*
-a {
-  font-size: 14px;
-  text-decoration: none;
-  color: #f9f9ff;
-}
-*/
 
 header {
   text-align: center;
   margin: 60px 0 20px 0;
-  font-size: 80px;
 }
 
-header > span {
-  color: #604a4a;
-}
-
-header > hr {
+hr {
   padding: 0;
   text-align: center;
-  width: 50%;
+  width: 800px;
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
+div.body {
+  padding: 0;
+  width: 800px;
+  margin: 0 auto;
+}
+
+iframe {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+}
+
+div.icons {
+  text-align: center;
+  font-size: 80px;
+}
+
+div.space {
+  height: 100px;
+}
+
 .fa {
-  color: #504040;
+  color: #322;
   padding: 6px;
   transition: 0.3s;
   transition-duration: 0.3s;
