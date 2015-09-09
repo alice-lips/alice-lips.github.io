@@ -223,6 +223,7 @@ body {
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
+
 .reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled {
   border-right-color: #fa42af; }
 
