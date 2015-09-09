@@ -69,7 +69,7 @@
         </section>
 
         <section data-background-color="#fafffa"  data-background-transition="zoom">
-          <h2>news</h2>
+          <h2><i class="fa fa-exclamation"></i>news</h2>
 
           <p>
           冬コミ (c89)だします (落ちてなければ):
@@ -95,7 +95,7 @@
 
         <section>
           <section>
-            <h2>publication</h2>
+            <h2><i class="fa fa-folder-open-o"></i>publication</h2>
             <ul style="list-style-type: circle">
               <li><a href="#/2/1">c88</a></li>
             </ul>
@@ -131,7 +131,7 @@
 
         <section>
           <section>
-            <h2>about us</h2>
+            <h2><i class="fa fa-users"></i>about us</h2>
 cympfh と himono
 <span style="font-size:90px; position:absolute; top:50px"><i class="fa fa-level-down"></i></span>
           </section>
@@ -164,7 +164,7 @@ cympfh と himono
         </section>
 
         <section>
-        <h2>log</h2>
+        <h2><i class="fa fa-file-text-o"></i>log</h2>
 <pre>
 2015/8/16  accepted at c88 @三日目(Sun.)東キ03b
            We published 2 novel books (one by himono and one by cympfh).
@@ -209,9 +209,13 @@ cympfh と himono
     </script>
 
     <!-- footer -->
-    <div id="footer" style="display:none;position: absolute; bottom: 16px; right: 110px; z-index: 20;">
+    <div id="footer" style="transition-duration:1.0s; transition:1.0s; position: absolute; bottom: 16px; right: 110px; z-index: 20;">
       push '?' or <i class="fa fa-hand-o-right"></i>
     </div>
+    <script>
+setTimeout(function(){document.getElementById('footer').style.opacity='0.0'},2000);
+setTimeout(function(){document.getElementById('footer').style.display='none'},7000);
+    </script>
 
   </body>
 </html>
