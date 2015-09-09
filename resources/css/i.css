@@ -6,7 +6,8 @@
 }
 
 body {
-  font-family: aquafont, aqua, YukarryAA;
+  /* font-family: aquafont, aqua, YukarryAA; */
+  font-family: "Source Code Pro", "Consolas", Helvetica, sans-serif;
   font-size: 14px;
   background-color: #f0f0f0;
   color: #000;
