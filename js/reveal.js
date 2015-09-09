@@ -203,40 +203,38 @@
 		autoSlideStartTime = -1,
 		autoSlidePaused = false,
 
-		// Holds information about the currently ongoing touch input
-		touch = {
-			startX: 0,
-			startY: 0,
-			startSpan: 0,
-			startCount: 0,
-			captured: false,
-			threshold: 40
-		},
+    // Holds information about the currently ongoing touch input
+    touch = {
+      startX: 0,
+      startY: 0,
+      startSpan: 0,
+      startCount: 0,
+      captured: false,
+      threshold: 40
+    },
 
-		// Holds information about the keyboard shortcuts
-		keyboardShortcuts = {
-			'N  ,  SPACE':			'Next slide',
-			'P':					'Previous slide',
-			'&#8592;  ,  H':		'Navigate left',
-			'&#8594;  ,  L':		'Navigate right',
-			'&#8593;  ,  K':		'Navigate up',
-			'&#8595;  ,  J':		'Navigate down',
-			'Home':					'First slide',
-			'End':					'Last slide',
-			'B  ,  .':				'Pause',
-			'F':					'Fullscreen',
-			'ESC, O':				'Slide overview'
-		};
+    // Holds information about the keyboard shortcuts
+    keyboardShortcuts = {
+      'N  ,  SPACE':   'Next page',
+      'P':             'Previous page',
+      '&#8592;  ,  H': 'Navigate left',
+      '&#8594;  ,  L': 'Navigate right',
+      '&#8593;  ,  K': 'Navigate up',
+      '&#8595;  ,  J': 'Navigate down',
+      'Home':          'First slide',
+      'End':           'Last slide',
+      'F':             'Fullscreen'
+    };
 
-	/**
-	 * Starts up the presentation if the client is capable.
-	 */
-	function initialize( options ) {
+    /**
+     * Starts up the presentation if the client is capable.
+     */
+    function initialize( options ) {
 
-		checkCapabilities();
+      checkCapabilities();
 
-		if( !features.transforms2d && !features.transforms3d ) {
-			document.body.setAttribute( 'class', 'no-transforms' );
+      if( !features.transforms2d && !features.transforms3d ) {
+        document.body.setAttribute( 'class', 'no-transforms' );
 
 			// Since JS won't be running any further, we load all lazy
 			// loading elements upfront
