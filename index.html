@@ -187,9 +187,9 @@ cympfh と himono
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
         controls: true,
-        progress: false,
+        progress: true,
         center: true,
-        loop: true,
+        loop: false,
         touch: true,
         keyboard: true,
         help: true,
@@ -206,6 +206,20 @@ cympfh と himono
           { src: 'plugin/notes/notes.js', async: true }
         ]
       });
+    </script>
+    <div id="NAV" style="position:absolute; right:100px; bottom:100px; z-index:20; font-size:180px; transform:rotate(45deg); opacity: 0.2">
+      <i class="fa fa-hand-o-right"></i>
+    </div>
+
+    <script>
+  (function (interval) {
+    function deleteNavigateHand(t) {
+      NAV.style.opacity = 0.3 * Math.exp(-t/100);
+      setTimeout(deleteNavigateHand, interval, t+1);
+    }
+    setTimeout(deleteNavigateHand , interval, 1);
+  }(40));
+
     </script>
   </body>
 </html>
