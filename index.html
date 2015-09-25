@@ -68,8 +68,8 @@
           </section>
         </section>
 
-        <section data-background-color="#fafffa"  data-background-transition="zoom">
-          <h2><i class="fa fa-exclamation"></i>news</h2>
+        <section>
+          <h2 class="postit alert"><i class="fa fa-exclamation"></i>news</h2>
 
           <p>
           冬コミ (c89)だします (落ちてなければ):
@@ -95,32 +95,25 @@
 
         <section>
           <section>
-            <h2><i class="fa fa-folder-open-o"></i>publication</h2>
+            <h2 class="postit"><i class="fa fa-folder-open-o"></i>public</h2>
             <ul style="list-style-type: circle">
               <li><a href="#/2/1">c88</a></li>
             </ul>
             <span style="font-size:90px; position:absolute; top:70px"><i class="fa fa-level-down"></i></span>
           </section>
           <section>
-            <h2>c88</h2>
+            <h2 class="postit">c88</h2>
 
-            <ul style="font-size:0.8em">
-              <li>2015/08/14-16</li>
-              <ul>
-                <li><a href="https://webcatalog-free.circle.ms/Circle/11941306">Comike Web Catalog (requires login)</a></li>
-                <li>日曜日 東キ03b</li>
-                <li>創作・アニメ・ゲーム(男性向) (200) </li>
-              </ul>
+            <ul>
+              <li>in Comic Market Summer aka c88, 2015/08/16</li>
+              <li><a href="https://webcatalog-free.circle.ms/Circle/11941306">Comike Web Catalog (requires login)</a></li>
+              <li>You can read <a href="./pub/c88/AllAplogies.pdf">"All Apologies"</a> in pdf!</li>
             </ul>
-
-            <p style="font-size:0.9em">
-            You can get <a href="./pub/c88/AllAplogies.pdf">"AllApologies" in pdf</a>!
-            </p>
 
             <table class="twocolumns">
               <tr>
                 <td style="width:300px">
-                  <img width="290px" src="./pub/c88/img/preface-all-apologies.png"><br />
+                  <a href="./pub/c88/AllAplogies.pdf"><img width="290px" src="./pub/c88/img/preface-all-apologies.png"></a><br />
                   <small>"All Apologies" written by himono</small>
                 </td>
                 <td style="width:300px">
@@ -135,13 +128,13 @@
 
         <section>
           <section>
-            <h2><i class="fa fa-users"></i>about us</h2>
+            <h2 class="postit"><i class="fa fa-users"></i>about us</h2>
             cympfh と himono
             <span style="font-size:90px; position:absolute; top:70px"><i class="fa fa-level-down"></i></span>
           </section>
 
           <section>
-            <h2>cympfh</h2>
+            <h2 class="postit user">cympfh</h2>
     <p style="float:left; line-height:30px; margin:40px">
       <i class="fa fa-twitter-square"></i>
       <code>@<a href="https://twitter.com/cympfh" target="_blank">cympfh</a></code>
@@ -156,7 +149,7 @@
           </section>
 
           <section>
-            <h2>himono</h2>
+            <h2 class="postit user">himono</h2>
     <p style="float:left; line-height:30px; margin:40px">
       <i class="fa fa-twitter-square"></i>
       <code>@<a href="https://twitter.com/minamo__i" target="_blank">minamo__i</a></code>
@@ -168,7 +161,7 @@
         </section>
 
         <section>
-        <h2><i class="fa fa-file-text-o"></i>log</h2>
+        <h2 class="postit"><i class="fa fa-file-text-o"></i>log</h2>
 <pre>
 2015/8/16  accepted at c88 @三日目(Sun.)東キ03b
            We published 2 novel books (one by himono and one by cympfh).
@@ -198,7 +191,7 @@
         keyboard: true,
         help: true,
 
-        transition: 'convex', // none/fade/slide/convex/concave/zoom
+        transition: 'concave', // none/fade/slide/convex/concave/zoom
 
         // Optional reveal.js plugins
         dependencies: [
@@ -210,23 +203,6 @@
           { src: 'plugin/notes/notes.js', async: true }
         ]
       });
-    </script>
-    <!--
-    <div id="NAV" style="position:absolute; right:100px; bottom:100px; z-index:20; font-size:180px; transform:rotate(45deg); opacity: 0.2">
-      <i class="fa fa-hand-o-right"></i>
-    </div>
-    -->
-
-    <script>
-/*
-  (function (interval) {
-    function deleteNavigateHand(t) {
-      NAV.style.opacity = 0.3 * Math.exp(-t/100);
-      setTimeout(deleteNavigateHand, interval, t+1);
-    }
-    setTimeout(deleteNavigateHand , interval, 1);
-  }(40));
-*/
     </script>
   </body>
 </html>

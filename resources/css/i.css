@@ -7,7 +7,7 @@
 
 body {
   /* font-family: aquafont, aqua, YukarryAA; */
-  font-family: "Source Code Pro", "Consolas", Helvetica, sans-serif;
+  font-family: "Source Han Pro", "Source Code Pro", "Consolas", Helvetica, sans-serif;
   font-size: 14px;
   background-color: #f0f0f0;
   color: #000;
@@ -72,4 +72,50 @@ a > .fa-exclamation:hover {
   transform: scale(1.2, 1.2);
 }
 
+h2.postit {
+  background-color: white;
+  display: block;
+  font-size: 1.9em !important;
+  width: 360px !important;
+  height: 80px !important;
+  text-align: left;
+  margin-left: -40px !important;
+  padding-left: 40px !important;
+  border-right: 50px #ffa solid !important;
+  position: relative;
+}
+
+h2.postit.alert {
+  border-right: 50px #d00 solid !important;
+}
+
+h2.postit.user {
+  border-right: 50px #ddd solid !important;
+}
+
+h2.postit:after {
+  content: "";
+  width: 320px;
+  height: 40px;
+  position: absolute;
+  top: 25px;
+  right: -40px;
+  -webkit-box-shadow: 0 20px 20px #555 ;
+  -moz-box-shadow: 0 20px 20px #555 ;
+  box-shadow: 0 20px 20px #555 ;
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -o-transform: rotate(2deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+  z-index: -1;
+}
+
+li {
+  list-style: none;
+}
+
+pre {
+  font-size: 0.65em !important;
+}
 
