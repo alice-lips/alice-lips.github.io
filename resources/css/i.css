@@ -76,8 +76,8 @@ h2.postit {
   background-color: white;
   display: block;
   font-size: 1.9em !important;
-  width: 360px !important;
-  height: 80px !important;
+  width: 300px !important;
+  height: 65px !important;
   text-align: left;
   margin-left: -40px !important;
   padding-left: 40px !important;
@@ -96,10 +96,10 @@ h2.postit.user {
 h2.postit:after {
   content: "";
   width: 320px;
-  height: 40px;
+  height: 30px;
   position: absolute;
-  top: 25px;
-  right: -40px;
+  top: 20px;
+  right: -50px;
   -webkit-box-shadow: 0 20px 20px #555 ;
   -moz-box-shadow: 0 20px 20px #555 ;
   box-shadow: 0 20px 20px #555 ;
