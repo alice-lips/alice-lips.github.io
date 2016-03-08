@@ -1,207 +1,85 @@
-<!doctype html>
-<html lang="ja">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Alice.fail</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <link rel='stylesheet' href='./resources/css/font-awesome.min.css'>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="reveal.js/css/theme/alice.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
 
-  <head>
-    <meta charset="utf-8">
-    <title>Alice.lips</title>
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-
-    <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/black.css" id="theme">
-    <link rel='stylesheet' href='./resources/css/font-awesome.min.css'>
-    <link rel='stylesheet' href='./resources/css/i.css'>
-
-    <!-- Code syntax highlighting -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
-
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
-
-    <!--[if lt IE 9]>
-    <script src="lib/js/html5shiv.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-
-    <div class="reveal">
-
-      <!-- Any section element inside of this container is displayed as a slide -->
-      <div class="slides">
-        <section>
-          <section>
-          <i style="font-size: 150px" class="fa fa-object-ungroup"></i>
-            <img
-            width="300px"
-            src="resources/img/alicelips.colored.svg"
-            alt="Alice.lips">
-            <hr />
-            <div class="icons">
-              <a href="#/3"><i class="fa fa-users"></i></a>
-              <a href="#/1"><i class="fa fa-exclamation"></i></a>
-              <a href="#/2"><i class="fa fa-folder-open-o"></i></a>
-              <a href="#/4"><i class="fa fa-file-text-o"></i></a>
-            </div>
-            <p> <small>Created by himono and cympfh</small> </p>
-          </section>
-          <section>
-            <h2>Transition Styles</h2>
-            <p>
-              You can select from different transitions, like: <br>
-              <a href="?transition=none#/transitions">None</a> -
-              <a href="?transition=fade#/transitions">Fade</a> -
-              <a href="?transition=slide#/transitions">Slide</a> -
-              <a href="?transition=convex#/transitions">Convex</a> -
-              <a href="?transition=concave#/transitions">Concave</a> -
-              <a href="?transition=zoom#/transitions">Zoom</a>
-            </p>
-          </section>
-        </section>
-
-        <section>
-          <h2 class="postit alert"><i class="fa fa-exclamation"></i>news</h2>
-
-          <p>
-          冬コミ (c89) <b>落選</b>しました.
-          </p>
-
-          <p>
-          Alice.lips では絵師を募集しています.
-          ご連絡は
-          <a href="#/3/1">cympfh</a>
-          または
-          <a href="#/3/2">himono</a>
-          まで.
-          </p>
-
-          <p>
-          <a href="#/2/1">夏コミ (c88)</a> に出版した
-          <a href="./pub/c88/AllAplogies.pdf">"All apologies"</a>
-          をpdfで公開します.
-          </p>
-
-        </section>
-
-        <section>
-          <section>
-            <h2 class="postit"><i class="fa fa-folder-open-o"></i>public</h2>
-            <ul style="list-style-type: circle">
-              <li><a href="#/2/1">c88</a></li>
-            </ul>
-            <span style="font-size:90px; position:absolute; top:70px"><i class="fa fa-level-down"></i></span>
-          </section>
-          <section>
-            <h2 class="postit">c88</h2>
-
-            <ul>
-              <li>in Comic Market Summer aka c88, 2015/08/16</li>
-              <li><a href="https://webcatalog-free.circle.ms/Circle/11941306">Comike Web Catalog (requires login)</a></li>
-              <li>You can read <a href="./pub/c88/AllAplogies.pdf">"All Apologies"</a> in pdf!</li>
-            </ul>
-
-            <table class="twocolumns">
-              <tr>
-                <td style="width:300px">
-                  <a href="./pub/c88/AllAplogies.pdf"><img width="290px" src="./pub/c88/img/preface-all-apologies.png"></a><br />
-                  <small>"All Apologies" written by himono</small>
-                </td>
-                <td style="width:300px">
-                  <img width="290px" src="./pub/c88/img/preface-take3.png"><br />
-                  <small>"Take 3" written by cympfh</small>
-                </td>
-              </tr>
-            </table>
-
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h2 class="postit"><i class="fa fa-users"></i>about us</h2>
-            cympfh と himono
-            <span style="font-size:90px; position:absolute; top:70px"><i class="fa fa-level-down"></i></span>
-          </section>
-
-          <section>
-            <h2 class="postit user">cympfh</h2>
-    <p style="float:left; line-height:30px; margin:40px">
-      <i class="fa fa-twitter-square"></i>
-      <code>@<a href="https://twitter.com/cympfh" target="_blank">cympfh</a></code>
-      <i class="fa fa-github-square"></i>
-      <code><a href="https://github.com/cympfh" target="_blank">cympfh</a></code>
-      <br />
-      <i class="fa fa-envelope"></i>
-      <code>%w(cympfh gmail com)<span style='color:#ddd'>.join('.').sub('.', '@')</span></code>
-    <p style="float: right">
-    <img height="120px" src="resources/img/cympfh-id.png">
-    </p>
-          </section>
-
-          <section>
-            <h2 class="postit user">himono</h2>
-    <p style="float:left; line-height:30px; margin:40px">
-      <i class="fa fa-twitter-square"></i>
-      <code>@<a href="https://twitter.com/minamo__i" target="_blank">minamo__i</a></code>
-    <p style="float: right">
-    <img src="none" alt="伝説のロッカー">
-    </p>
-          </section>
-
-        </section>
-
-        <section>
-        <h2 class="postit"><i class="fa fa-file-text-o"></i>log</h2>
-<pre>
-2015/8/16  accepted at c88 @三日目(Sun.)東キ03b
-           We published 2 novel books (one by himono and one by cympfh).
-           Please see /pub/c88 for detail
-2015/8/2   v0.2.1
-2015/1/8   v0.1.2: alice-lips.github.io -> alice.fail (permanent link)
-</pre>
-        </section>
-
-      </div>
-
+<section id="alice.lips" class="slide level1">
+<h1>Alice.lips</h1>
+<p><a href="#//about-us">cympfh</a> and <a href="#//about-us">himono</a></p>
+<p>since 2014</p>
+</section>
+<section id="news" class="slide level1">
+<h1>News</h1>
+<ul>
+<li>冬コミ (c89) <strong>落選</strong></li>
+<li>Alice.lips では絵師を募集しています <span class="math inline">\(\Rightarrow\)</span> <a href="#//about-us">contact</a></li>
+<li>夏コミ (c88) にて二冊公開しました <span class="math inline">\(\Rightarrow\)</span> <a href="https://github.com/alice-lips/c88">alice-lips/c88</a></li>
+</ul>
+</section>
+<section id="about-us" class="slide level1">
+<h1>About us</h1>
+<p>Alice.lips はふわふわした可愛い女の子を主人公にした何かを作ることに命を捧げます</p>
+<p style="float:left;margin:40px;font-size:20px;">
+<i class="fa fa-twitter-square"></i> <code>@<a href="https://twitter.com/cympfh" target="_blank">cympfh</a></code> <i class="fa fa-github-square"></i> <code><a href="https://github.com/cympfh" target="_blank">cympfh</a></code> <i class="fa fa-envelope"></i> <code>%w(cympfh gmail com)<span style="color:#ddd">.join('.').sub('.', '@')</span></code>
+</p>
+<p style="float:left;margin:40px;font-size:20px;">
+<i class="fa fa-twitter-square"></i> <code>@<a href="https://twitter.com/minamo__i" target="_blank">minamo__i</a></code>
+</p>
+<p style="float: right">
+<a href="https://twitter.com/minamo__i"><img height="120px" src="resources/img/himono-id.png"></a> <a href="https://twitter.com/cympfh"><img height="120px" src="resources/img/cympfh-id.png"></a>
+</p>
+</section>
+<section id="history" class="slide level1">
+<h1>History</h1>
+<ul>
+<li>2015/08/16: accepted at 88th comiket (2015 Summer) and published on 3rd day at <code>東キ03b</code></li>
+</ul>
+</section>
+<section id="c88" class="slide level1">
+<h1>c88</h1>
+<p>2016/08/16</p>
+<p>We published 2 books: &quot;All apologies&quot; (by himono) and &quot;Take 3&quot; (by cympfh).</p>
+<p>They are published in <a href="https://github.com/alice-lips/c88">alice-lips/c88</a>.</p>
+<p><img width="30%" src="resources/img/c88/preface-all-apologies.png" /> <img width="30%" src="resources/img/c88/preface-take3.png" /></p>
+</section>
     </div>
+  </div>
 
-    <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.js"></script>
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+  <script src="resources/js/fail.js"></script>
 
-    <script>
+  <script>
 
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
-        controls: true,
-        progress: true,
-        center: true,
-        loop: false,
-        touch: true,
-        keyboard: true,
-        help: true,
-
-        transition: 'concave', // none/fade/slide/convex/concave/zoom
 
         // Optional reveal.js plugins
         dependencies: [
-          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: 'plugin/zoom-js/zoom.js', async: true },
-          { src: 'plugin/notes/notes.js', async: true }
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
         ]
       });
     </script>
-  </body>
+    </body>
 </html>
