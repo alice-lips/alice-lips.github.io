@@ -37,7 +37,9 @@ Alice.lips はふわふわした可愛い女の子を主人公にした何かを
 
 # History
 
+- failed 89th comiket (2015 Winter)
 - 2015/08/16: accepted at 88th comiket (2015 Summer) and published on 3rd day at `東キ03b`
+- failed 87th comiket (2014 Winter)
 
 # c88
 
