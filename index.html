@@ -2,7 +2,19 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
+
+  <!-- Open Graph / Twitter Card -->
+  <meta property="og:title" content="Alice.fail">
+  <meta property="og:description" content="早寝早起き">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://alice.fail/">
+  <meta property="og:site_name" content="Alice.fail">
+  <!-- <meta property="og:image" content="http://alice.fail/hoge.png"> -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@cympfh">
+
+  <meta name="author" content="cympfh">
+
   <title>Alice.fail</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -10,11 +22,13 @@
   <link rel="stylesheet" href="reveal.js/css/reveal.css">
   <link rel='stylesheet' href='./resources/css/font-awesome.min.css'>
   <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
+
   <link rel="stylesheet" href="reveal.js/css/theme/alice.css" id="theme">
   <!--[if lt IE 9]>
   <script src="reveal.js/lib/js/html5shiv.js"></script>
   <![endif]-->
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 </head>
 <body>
 <div style="position:fixed;left:5px;bottom:-3px;opacity:0.3"><img height="64px" src="resources/img/alicelips.colored.svg" /></div>
@@ -31,8 +45,8 @@
 <h1>News</h1>
 <ul>
 <li>冬コミ (c89) <strong>落選</strong></li>
-<li>Alice.lips ではかわいいふわふわした女の子を描いてくれる絵師を募集しています <span class="math inline">\(\Rightarrow\)</span> <a href="#//about-us">contact</a></li>
-<li>夏コミ (c88) にて二冊公開しました <span class="math inline">\(\Rightarrow\)</span> <a href="https://github.com/alice-lips/c88">alice-lips/c88</a></li>
+<li>Alice.lips ではかわいいふわふわした女の子を描いてくれる絵師を募集しています <span class="math">\(\Rightarrow\)</span> <a href="#//about-us">contact</a></li>
+<li>夏コミ (c88) にて二冊公開しました <span class="math">\(\Rightarrow\)</span> <a href="https://github.com/alice-lips/c88">alice-lips/c88</a></li>
 </ul>
 </section>
 <section id="about-us" class="slide level1">
@@ -41,12 +55,15 @@
 <p style="float:left;margin:40px;font-size:20px;">
 <i class="fa fa-twitter-square"></i> <code>@<a href="https://twitter.com/cympfh" target="_blank">cympfh</a></code> <i class="fa fa-github-square"></i> <code><a href="https://github.com/cympfh" target="_blank">cympfh</a></code> <i class="fa fa-envelope"></i> <code>%w(cympfh gmail com)<span style="color:#ddd">.join('.').sub('.', '@')</span></code>
 </p>
+
 <p style="float:left;margin:40px;font-size:20px;">
 <i class="fa fa-twitter-square"></i> <code>@<a href="https://twitter.com/minamo__i" target="_blank">minamo__i</a></code>
 </p>
+
 <p style="float: right">
 <a href="https://twitter.com/minamo__i"><img height="120px" src="resources/img/himono-id.png"></a> <a href="https://twitter.com/cympfh"><img height="120px" src="resources/img/cympfh-id.png"></a>
 </p>
+
 </section>
 <section id="history" class="slide level1">
 <h1>History</h1>
@@ -69,6 +86,7 @@
   <script src="reveal.js/lib/js/head.min.js"></script>
   <script src="reveal.js/js/reveal.js"></script>
   <script src="resources/js/fail.js"></script>
+  <script src="resources/js/blink.js"></script>
 
   <script>
 
