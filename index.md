@@ -8,6 +8,8 @@ since 2014
 
 # News
 
+- 夏コミ (c90) にて二冊公開します
+    - 一冊は前回の All Apologies の続編となっております
 - 冬コミ (c89) **落選**
 - Alice.lips ではかわいいふわふわした女の子を描いてくれる絵師を募集しています $\Rightarrow$ [contact](#/about-us)
 - 夏コミ (c88) にて二冊公開しました $\Rightarrow$ [alice-lips/c88](https://github.com/alice-lips/c88)
